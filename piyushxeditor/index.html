@@ -5,10 +5,7 @@
 
     <meta charset="UTF-8">
 
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- =========================
          PRIMARY SEO
@@ -86,11 +83,9 @@
         content="en_IN"
     >
 
-    <!-- PROFILE / LOGO IMAGE -->
-
     <meta
         property="og:image"
-        content="https://piyushxeditor.netlify.app/assests/favicon.png"
+        content="https://piyushxeditor.netlify.app/assets/favicon.png"
     >
 
     <meta
@@ -120,7 +115,7 @@
 
     <meta
         name="twitter:image"
-        content="https://piyushxeditor.netlify.app/assests/favicon.png"
+        content="https://piyushxeditor.netlify.app/assets/favicon.png"
     >
 
 
@@ -140,18 +135,24 @@
 
 
     <!-- =========================
-         WEBSITE ICON / PROFILE LOGO
+         WEBSITE ICON
     ========================== -->
 
     <link
         rel="icon"
-        href="assests/favicon.png"
         type="image/png"
+        href="/assets/favicon.png"
+    >
+
+    <link
+        rel="shortcut icon"
+        type="image/png"
+        href="/assets/favicon.png"
     >
 
     <link
         rel="apple-touch-icon"
-        href="assests/favicon.png"
+        href="/assets/favicon.png"
     >
 
 
@@ -179,7 +180,7 @@
 
         "url": "https://piyushxeditor.netlify.app/",
 
-        "image": "https://piyushxeditor.netlify.app/assests/favicon.png",
+        "image": "https://piyushxeditor.netlify.app/assets/favicon.png",
 
         "jobTitle": "Professional Video Editor",
 
@@ -344,7 +345,7 @@
 
             <video
                 class="hero-video"
-                src="assests/my-best-reel.mp4"
+                src="assets/my-best-reel.mp4"
                 muted
                 autoplay
                 loop
@@ -477,14 +478,13 @@
     <div class="reels-container">
 
 
-
         <!-- REEL 01 -->
 
         <article class="reel-card">
 
             <video
                 class="portfolio-video"
-                src="assests/my-best-reel.mp4"
+                src="assets/my-best-reel.mp4"
                 muted
                 autoplay
                 loop
@@ -520,7 +520,7 @@
 
             <video
                 class="portfolio-video"
-                src="assests/my-best-reel1.mp4"
+                src="assets/my-best-reel1.mp4"
                 muted
                 autoplay
                 loop
@@ -556,7 +556,7 @@
 
             <video
                 class="portfolio-video"
-                src="assests/my-best-reel2.mp4"
+                src="assets/my-best-reel2.mp4"
                 muted
                 autoplay
                 loop
@@ -592,7 +592,7 @@
 
             <video
                 class="portfolio-video"
-                src="assests/my-best-reel3.mp4"
+                src="assets/my-best-reel3.mp4"
                 muted
                 autoplay
                 loop
@@ -628,7 +628,7 @@
 
             <video
                 class="portfolio-video"
-                src="assests/my-best-reel4.mp4"
+                src="assets/my-best-reel4.mp4"
                 muted
                 autoplay
                 loop
@@ -664,7 +664,7 @@
 
             <video
                 class="portfolio-video"
-                src="assests/my-best-reel5.mp4"
+                src="assets/my-best-reel5.mp4"
                 muted
                 autoplay
                 loop
@@ -700,7 +700,7 @@
 
             <video
                 class="portfolio-video"
-                src="assests/my-best-reel6.mp4"
+                src="assets/my-best-reel6.mp4"
                 muted
                 autoplay
                 loop
@@ -736,7 +736,7 @@
 
             <video
                 class="portfolio-video"
-                src="assests/my-best-reel7.mp4"
+                src="assets/my-best-reel7.mp4"
                 muted
                 autoplay
                 loop
@@ -1146,43 +1146,29 @@
 
 document.addEventListener("DOMContentLoaded", function () {
 
-    const videos =
-        document.querySelectorAll("video");
+    const videos = document.querySelectorAll("video");
 
 
     videos.forEach(function (video) {
 
         video.muted = true;
 
-        video.setAttribute(
-            "muted",
-            ""
-        );
+        video.setAttribute("muted", "");
 
-        video.setAttribute(
-            "playsinline",
-            ""
-        );
+        video.setAttribute("playsinline", "");
 
-        video.setAttribute(
-            "webkit-playsinline",
-            ""
-        );
+        video.setAttribute("webkit-playsinline", "");
 
 
         const startVideo = function () {
 
             video.muted = true;
 
-            const promise =
-                video.play();
-
+            const promise = video.play();
 
             if (promise !== undefined) {
 
-                promise.catch(
-                    function () {}
-                );
+                promise.catch(function () {});
 
             }
 
@@ -1193,9 +1179,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             startVideo();
 
-        }
-
-        else {
+        } else {
 
             video.addEventListener(
                 "loadeddata",
@@ -1230,9 +1214,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     const reelVideos =
-        document.querySelectorAll(
-            ".portfolio-video"
-        );
+        document.querySelectorAll(".portfolio-video");
 
 
     const observer =
@@ -1247,9 +1229,7 @@ document.addEventListener("DOMContentLoaded", function () {
                             entry.target;
 
 
-                        if (
-                            entry.isIntersecting
-                        ) {
+                        if (entry.isIntersecting) {
 
                             video.muted = true;
 
@@ -1257,9 +1237,7 @@ document.addEventListener("DOMContentLoaded", function () {
                                 function () {}
                             );
 
-                        }
-
-                        else {
+                        } else {
 
                             video.pause();
 
@@ -1302,9 +1280,7 @@ document.addEventListener(
     function (event) {
 
         const video =
-            event.target.closest(
-                "video"
-            );
+            event.target.closest("video");
 
 
         if (!video) {
@@ -1323,9 +1299,7 @@ document.addEventListener(
                 function () {}
             );
 
-        }
-
-        else {
+        } else {
 
             video.pause();
 
